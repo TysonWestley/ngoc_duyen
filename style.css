@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+  }
+  
+  h1 {
+    color: #d63384;
+    font-size: 2rem;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .confession {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #e83e8c;
+    font-weight: bold;
+  }
+  
+  .buttons button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #d63384;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  
+  .heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+  }
+  .heart:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+  }
+  .heart:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+  }
+  .heart:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+  }
+  .heart:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0% {
+      bottom: 0;
+      opacity: 1;
+      transform: translateY(0) rotate(45deg);
+    }
+    100% {
+      bottom: 100%;
+      opacity: 0;
+      transform: translateY(-200px) rotate(45deg);
+    }
+  }
+  
